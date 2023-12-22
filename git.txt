@@ -1,0 +1,62 @@
+git config --global user.name "Salih Yurek" // en başta kullanıcı adı tanımlama 
+git config --global user.email "salihyurek004@gmail.com"
+git config --global user.name
+git config --global user.email
+
+
+// proje oluşturma 
+pwd // terminal üzerindeki dizinin tam edresi
+ls // listeleme
+cd Desktop // arama 
+cd .. // bir önceki dizi
+clear 
+ctrl+L
+
+
+git init // her zaman projenin git projesi olduğunu belirtmek için yazılır 
+ls -a // gizli dosyaları görüntüler 
+
+git add . // nokta şu anki dizin // staging area - geçiş bölgesi // kontrol etme imkanı tanıyor  // nokta yerine dosyanın adını da yazabilirsin // nokta dediğinde tüm dosyaları ekler
+git commit -m "versinon 1.6" // gibi 
+git log // versiyonları listeleme 
+
+git status // herhangib bir değişiklil var mı 
+// git repository // git deposu 
+// working directory // çalışma dizini  
+
+git diff // dosylardaki değişiklikleri gösterir // sililenleri kırmızı (-), eklenleri yeşil (+) şeklinde gösterir // çalışma dizini ile git klasörü arasındaki farklılıkları gösterir
+git diff --staged // git deposu ile staging area arasındaki farklılıkları gösterir 
+
+git rm carpma.py cikarma.cpp // silinen dosya // sonrasında git commit ile git deposuna bildir "açıklamasını yap"
+git rm -r silinecekler/ // remove = r // sonrasında git commit ile git deposuna bildir "açıklamasını yap"
+
+// dosya isilmlerindirme ve taşıma aynı aslında
+git mv degisikliktenOnce.docx degisikliktenSonra.docx // dosya isilmlerindirmesinde değişiklik
+git mv deneme2.txt dosyalar/ // taşıma işlemi 
+
+// değişiklikleri geri alma, çalışma dizini için
+git checkout -- index // index burada dosya adı
+
+// değişiklikleri geri alma, geçiş bölgesi için
+git reset HEAD index // index burada dosya adı // geçiş bölgesinden geri aldı // çalışma dizininde hala duruyor 
+
+// version değiştirme - önceki versiyona geri dönme
+git checkout hashKodunuBurayaYaz -- . // ya kodun hepsi ya da ilk 7 hanesi // git log üzerinden  // arıdından commit
+
+
+// Github
+git remote add herhangiBirSeygithubRepo https: 
+git remote 
+git push -u githubRepo master // u - bütün dosyaları gönder // push göndermek 
+
+// .gitignore
+cat >> .gitignore
+veritabanı 
+^C // ctrl + C
+cat .gitignore // içindekileri inceler 
+// UYARI: dosyaları ilk önce commit yapma, sonra .gitigrnore yapsan bile bir işe yaramaz
+
+getit .gitignore // .gitignore dosyalarının içini açar 
+klasörAdı/* //  açılan dosyanın içine yazılır // tüm dosyaları içeririr
+!belgeler/dosyaAdi.html // sadece bir dosyaya .gitignore uygula // dahil etme demek 
+
